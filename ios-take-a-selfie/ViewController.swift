@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
         
-        imagePickerController.mediaTypes = [kUTTypeImage]
+        imagePickerController.mediaTypes = [kUTTypeImage as String]
         imagePickerController.allowsEditing = true
         imagePickerController.cameraDevice = UIImagePickerControllerCameraDevice.Front
         imagePickerController.showsCameraControls = true
@@ -48,17 +48,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.imageView.image = image
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         self.imageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
         if (self.imageView.image == nil) {
             self.imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         }
-        println(info)
+        print(info)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        println("Image picking canceled!")
+        print("Image picking canceled!")
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
