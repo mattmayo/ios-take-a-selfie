@@ -19,11 +19,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-4D-ROj">
-                                <rect key="frame" x="264" y="285" width="73" height="30"/>
+                                <rect key="frame" x="178" y="285" width="244" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Take selfie">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Take a selfie using standard overlay"/>
                                 <connections>
                                     <action selector="takeSelfieButtonTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hCG-e2-8Q9"/>
                                 </connections>
@@ -36,12 +34,18 @@
                                     <constraint firstAttribute="width" secondItem="2cm-Zk-992" secondAttribute="height" id="GfM-hL-uLd"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k5-4w-gOA">
-                                <rect key="frame" x="230" y="331" width="140" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgq-2b-NJb">
+                                <rect key="frame" x="207" y="323" width="187" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Choose from photos">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Selfie using custom overlay"/>
+                                <connections>
+                                    <segue destination="zUG-Wg-exN" kind="presentation" id="h5k-Aw-z63"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k5-4w-gOA">
+                                <rect key="frame" x="230" y="361" width="140" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Choose from photos"/>
                                 <connections>
                                     <action selector="chooseFromGalleyTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r7c-pM-HrG"/>
                                 </connections>
@@ -52,11 +56,19 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="hPv-4D-ROj" secondAttribute="centerX" id="3Zl-EQ-N92"/>
                             <constraint firstItem="2cm-Zk-992" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="PPo-T0-TWR"/>
+                            <constraint firstItem="pgq-2b-NJb" firstAttribute="top" secondItem="hPv-4D-ROj" secondAttribute="bottom" constant="8" id="Wbd-58-znH"/>
                             <constraint firstAttribute="centerX" secondItem="2cm-Zk-992" secondAttribute="centerX" id="YT5-cu-4fo"/>
                             <constraint firstAttribute="centerY" secondItem="hPv-4D-ROj" secondAttribute="centerY" id="eAc-O1-uIz"/>
+                            <constraint firstItem="pgq-2b-NJb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="s0w-xB-JMB"/>
                             <constraint firstAttribute="centerX" secondItem="9k5-4w-gOA" secondAttribute="centerX" id="xpG-y8-cSK"/>
-                            <constraint firstItem="9k5-4w-gOA" firstAttribute="top" secondItem="hPv-4D-ROj" secondAttribute="bottom" constant="16" id="xrV-f7-ieQ"/>
+                            <constraint firstItem="9k5-4w-gOA" firstAttribute="top" secondItem="hPv-4D-ROj" secondAttribute="bottom" constant="32" id="xrV-f7-ieQ"/>
+                            <constraint firstItem="9k5-4w-gOA" firstAttribute="top" secondItem="pgq-2b-NJb" secondAttribute="bottom" constant="8" id="ykZ-u3-4BL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xrV-f7-ieQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="2cm-Zk-992" id="vSu-pS-r3K"/>
@@ -64,6 +76,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Camera Custom Overlay View Controller-->
+        <scene sceneID="BA9-l7-SqG">
+            <objects>
+                <viewController id="zUG-Wg-exN" customClass="CameraCustomOverlayViewController" customModule="ios_take_a_selfie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ugS-Ad-0hy"/>
+                        <viewControllerLayoutGuide type="bottom" id="dJt-1j-Kle"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zY6-ok-Y7G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wok-4S-jZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="400"/>
         </scene>
     </scenes>
 </document>

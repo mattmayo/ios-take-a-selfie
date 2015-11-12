@@ -13,6 +13,7 @@
 		7F2E53891B7C054C002582C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2E53881B7C054C002582C8 /* Images.xcassets */; };
 		7F2E538C1B7C054C002582C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2E538A1B7C054C002582C8 /* LaunchScreen.xib */; };
 		7F2E53981B7C054D002582C8 /* ios_take_a_selfieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2E53971B7C054D002582C8 /* ios_take_a_selfieTests.swift */; };
+		7F85DDD61BF42F83006C8F6E /* CameraCustomOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85DDD51BF42F83006C8F6E /* CameraCustomOverlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7F2E53911B7C054D002582C8 /* ios-take-a-selfieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-take-a-selfieTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2E53961B7C054D002582C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F2E53971B7C054D002582C8 /* ios_take_a_selfieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_take_a_selfieTests.swift; sourceTree = "<group>"; };
+		7F85DDD51BF42F83006C8F6E /* CameraCustomOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCustomOverlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,11 @@
 			isa = PBXGroup;
 			children = (
 				7F2E53811B7C054C002582C8 /* AppDelegate.swift */,
-				7F2E53831B7C054C002582C8 /* ViewController.swift */,
+				7F85DDD51BF42F83006C8F6E /* CameraCustomOverlayViewController.swift */,
 				7F2E53851B7C054C002582C8 /* Main.storyboard */,
-				7F2E53881B7C054C002582C8 /* Images.xcassets */,
 				7F2E538A1B7C054C002582C8 /* LaunchScreen.xib */,
+				7F2E53881B7C054C002582C8 /* Images.xcassets */,
+				7F2E53831B7C054C002582C8 /* ViewController.swift */,
 				7F2E537F1B7C054C002582C8 /* Supporting Files */,
 			);
 			path = "ios-take-a-selfie";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F85DDD61BF42F83006C8F6E /* CameraCustomOverlayViewController.swift in Sources */,
 				7F2E53841B7C054C002582C8 /* ViewController.swift in Sources */,
 				7F2E53821B7C054C002582C8 /* AppDelegate.swift in Sources */,
 			);
