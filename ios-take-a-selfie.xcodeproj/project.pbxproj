@@ -14,6 +14,7 @@
 		7F2E538C1B7C054C002582C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2E538A1B7C054C002582C8 /* LaunchScreen.xib */; };
 		7F2E53981B7C054D002582C8 /* ios_take_a_selfieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2E53971B7C054D002582C8 /* ios_take_a_selfieTests.swift */; };
 		7F85DDD61BF42F83006C8F6E /* CameraCustomOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85DDD51BF42F83006C8F6E /* CameraCustomOverlayViewController.swift */; };
+		7F85DDD81BF4788A006C8F6E /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F85DDD71BF4788A006C8F6E /* CustomOverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		7F2E53961B7C054D002582C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F2E53971B7C054D002582C8 /* ios_take_a_selfieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_take_a_selfieTests.swift; sourceTree = "<group>"; };
 		7F85DDD51BF42F83006C8F6E /* CameraCustomOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCustomOverlayViewController.swift; sourceTree = "<group>"; };
+		7F85DDD71BF4788A006C8F6E /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				7F2E53811B7C054C002582C8 /* AppDelegate.swift */,
 				7F85DDD51BF42F83006C8F6E /* CameraCustomOverlayViewController.swift */,
 				7F2E53851B7C054C002582C8 /* Main.storyboard */,
+				7F85DDD71BF4788A006C8F6E /* CustomOverlayView.xib */,
 				7F2E538A1B7C054C002582C8 /* LaunchScreen.xib */,
 				7F2E53881B7C054C002582C8 /* Images.xcassets */,
 				7F2E53831B7C054C002582C8 /* ViewController.swift */,
@@ -199,6 +202,7 @@
 			files = (
 				7F2E53871B7C054C002582C8 /* Main.storyboard in Resources */,
 				7F2E538C1B7C054C002582C8 /* LaunchScreen.xib in Resources */,
+				7F85DDD81BF4788A006C8F6E /* CustomOverlayView.xib in Resources */,
 				7F2E53891B7C054C002582C8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

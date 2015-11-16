@@ -39,7 +39,7 @@
                                 <animations/>
                                 <state key="normal" title="Selfie using custom overlay"/>
                                 <connections>
-                                    <segue destination="zUG-Wg-exN" kind="presentation" id="h5k-Aw-z63"/>
+                                    <action selector="takeSelfieCustomOverlayButtonTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rze-5U-qjS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k5-4w-gOA">
@@ -88,9 +88,41 @@
                     <view key="view" contentMode="scaleToFill" id="zY6-ok-Y7G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Vw-e1-9Wh">
+                                <rect key="frame" x="0.0" y="20" width="600" height="550"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5E-aw-Lwu">
+                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="54H-rD-rda"/>
+                                </constraints>
+                                <state key="normal" title="Camera"/>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dJt-1j-Kle" firstAttribute="top" secondItem="e5E-aw-Lwu" secondAttribute="bottom" id="8u8-OQ-8EO"/>
+                            <constraint firstItem="3Vw-e1-9Wh" firstAttribute="top" secondItem="ugS-Ad-0hy" secondAttribute="bottom" id="CVQ-kf-97u"/>
+                            <constraint firstItem="dJt-1j-Kle" firstAttribute="top" secondItem="3Vw-e1-9Wh" secondAttribute="bottom" id="N8L-zl-Zd1"/>
+                            <constraint firstAttribute="trailing" secondItem="e5E-aw-Lwu" secondAttribute="trailing" id="RQo-6V-h4J"/>
+                            <constraint firstItem="3Vw-e1-9Wh" firstAttribute="leading" secondItem="zY6-ok-Y7G" secondAttribute="leading" id="Ty2-wG-wlv"/>
+                            <constraint firstItem="e5E-aw-Lwu" firstAttribute="top" secondItem="3Vw-e1-9Wh" secondAttribute="bottom" id="dBD-7x-o7f"/>
+                            <constraint firstAttribute="trailing" secondItem="3Vw-e1-9Wh" secondAttribute="trailing" id="dr6-U4-hSB"/>
+                            <constraint firstItem="e5E-aw-Lwu" firstAttribute="leading" secondItem="zY6-ok-Y7G" secondAttribute="leading" id="g5l-po-Rbo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="N8L-zl-Zd1"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="3Vw-e1-9Wh" id="Xli-cJ-bTp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wok-4S-jZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

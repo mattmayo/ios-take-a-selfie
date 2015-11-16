@@ -1,5 +1,7 @@
 import UIKit
 
-class CameraCustomOverlayViewController: UIViewController {
+class CameraCustomOverlayViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    @IBOutlet var imageView: UIImageView!
 
+    
 }
